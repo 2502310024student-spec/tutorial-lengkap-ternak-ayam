@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Panduan lengkap memulai ternak ayam petelur dengan 5 ekor, termasuk pakan, jadwal harian, HPP, pencatatan, biosekuriti, dan strategi 3 bulan.">
+<title>Ternak Ayam Petelur 5 Ekor — Panduan Lengkap</title>
+<style>
+:root{
+  --bg:#07120d;
+  --bg2:#0c1c14;
+  --panel:#10261b;
+  --panel2:#142e21;
+  --card:#ffffff;
+  --text:#17231d;
+  --muted:#718077;
+  --green:#19a463;
+  --green2:#0d7b48;
+  --lime:#b9ef6b;
+  --cream:#f5f8f4;
+  --line:#dfe9e2;
+  --shadow:0 18px 50px rgba(0,0,0,.12);
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 10% 0%,rgba(25,164,99,.16),transparent 30rem),
+    radial-gradient(circle at 90% 10%,rgba(185,239,107,.10),transparent 25rem),
+    var(--cream);
+  line-height:1.7;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; opacity:.22;
+  background-image:linear-gradient(rgba(25,164,99,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(25,164,99,.04) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+.site-header{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,239,107,.18),transparent 16rem),
+    linear-gradient(135deg,#06120c,#0b3d27 55%,#0f6840);
+  padding:70px 22px 90px;
+}
+.site-header:after{
+  content:"";
+  position:absolute; left:-5%; right:-5%; bottom:-60px; height:120px;
+  background:var(--cream); border-radius:50% 50% 0 0/70% 70% 0 0;
+}
+.hero{max-width:1180px;margin:auto;position:relative;z-index:1}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:7px 12px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);border-radius:999px;
+  color:#dff8e9;font-size:13px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.hero h1{
+  max-width:900px;margin:18px 0 14px;
+  font-size:clamp(36px,6vw,68px);line-height:1.02;letter-spacing:-.04em;
+}
+.hero p{max-width:850px;color:#d5e9dd;font-size:17px;margin:0}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.stat{
+  min-width:145px;padding:14px 16px;border-radius:15px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+}
+.stat b{display:block;font-size:22px;color:#fff}.stat span{font-size:12px;color:#c7dfd1}
+.layout{
+  max-width:1180px;margin:-25px auto 40px;position:relative;z-index:2;
+  display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px;padding:0 18px;
+}
+.sidebar{
+  align-self:start;position:sticky;top:18px;max-height:calc(100vh - 36px);
+  overflow:auto;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);
+  border:1px solid rgba(223,233,226,.9);border-radius:22px;
+  padding:17px;box-shadow:var(--shadow);
+}
+.sidebar-title{font-weight:900;color:#0c3e28;font-size:17px;margin:0 0 12px}
+.search{
+  width:100%;padding:12px 13px;border:1px solid var(--line);
+  border-radius:12px;outline:none;background:#f7faf8;font-size:14px;
+}
+.search:focus{border-color:#79c69d;box-shadow:0 0 0 4px rgba(25,164,99,.10)}
+#toc{margin-top:10px}
+#toc a{
+  display:block;padding:8px 10px;margin:2px 0;color:#42534a;
+  text-decoration:none;border-radius:10px;font-size:13px;line-height:1.35;
+}
+#toc a:hover,#toc a.active{background:#e9f7ef;color:#08733f;font-weight:800}
+main{
+  min-width:0;background:rgba(255,255,255,.96);border:1px solid var(--line);
+  border-radius:24px;box-shadow:var(--shadow);padding:clamp(24px,4vw,50px);
+}
+main h1{
+  font-size:clamp(26px,4vw,40px);line-height:1.15;color:#0c3e28;
+  margin:0 0 20px;letter-spacing:-.025em;
+}
+main h2{
+  scroll-margin-top:20px;color:#0b4d30;font-size:27px;line-height:1.2;
+  margin:52px 0 17px;padding:14px 16px;border-radius:15px;
+  background:linear-gradient(90deg,#eaf8ef,transparent);
+  border-left:5px solid var(--green);
+}
+main h3{
+  color:#127847;font-size:19px;margin:30px 0 8px;
+}
+main p{margin:11px 0}
+main strong{color:#0c4c2e}
+main hr{border:0;border-top:1px solid var(--line);margin:38px 0}
+main blockquote{
+  margin:18px 0;padding:16px 18px;border-left:4px solid var(--green);
+  background:#eff9f3;border-radius:0 14px 14px 0;color:#294638;
+}
+main ul{padding-left:24px}
+main li{margin:5px 0}
+.table-wrap{
+  overflow:auto;margin:20px 0;border:1px solid var(--line);
+  border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,.04)
+}
+table{border-collapse:collapse;width:100%;min-width:650px;background:#fff}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#0d6840;color:#fff;font-weight:800;white-space:nowrap}
+tr:nth-child(even) td{background:#f8fbf9}
+tr:hover td{background:#eff9f3}
+pre{
+  position:relative;margin:18px 0;padding:18px 20px;overflow:auto;
+  background:#08130e;color:#d9f7e6;border:1px solid #173b29;border-radius:15px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04)
+}
+pre code{background:none;color:inherit;padding:0}
+code{
+  background:#edf6f0;color:#0b6a3b;padding:2px 6px;border-radius:6px;
+  font-family:"SFMono-Regular",Consolas,monospace;font-size:.92em
+}
+.toolbar{
+  position:fixed;right:22px;bottom:22px;display:flex;gap:9px;z-index:20
+}
+.toolbar button{
+  border:0;cursor:pointer;color:#fff;background:#0d6840;
+  padding:11px 14px;border-radius:12px;font-weight:800;
+  box-shadow:0 10px 25px rgba(13,104,64,.25)
+}
+.toolbar button:hover{background:#094b2e;transform:translateY(-1px)}
+footer{
+  max-width:1180px;margin:0 auto 50px;padding:0 22px;color:var(--muted);
+  text-align:center;font-size:13px
+}
+.mobile-menu{
+  display:none;width:100%;margin:0 0 10px;padding:11px;border-radius:11px;
+  border:1px solid var(--line);background:#fff;font-weight:800;color:#174c34
+}
+@media(max-width:900px){
+  .site-header{padding:48px 18px 75px}
+  .layout{display:block;margin-top:-15px;padding:0 12px}
+  .mobile-menu{display:block}
+  .sidebar{position:relative;top:auto;max-height:none;margin-bottom:15px}
+  #toc{display:none}
+  .sidebar.open #toc{display:block}
+  main{border-radius:19px;padding:23px}
+  .hero-stats{gap:8px}.stat{min-width:125px}
+}
+@media(max-width:600px){
+  .hero h1{font-size:39px}
+  .hero p{font-size:15px}
+  main h2{font-size:23px;margin-top:38px}
+  .toolbar{right:12px;bottom:12px}
+  .toolbar button{padding:9px 11px;font-size:12px}
+}
+@media print{
+  body{background:#fff}.site-header{background:#fff;color:#000;padding:20px 0}
+  .hero p{color:#000}.sidebar,.toolbar,.mobile-menu{display:none!important}
+  .layout{display:block;margin:0;padding:0}.layout main{box-shadow:none;border:0;padding:0}
+  main h2{break-before:auto}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="hero">
+    <span class="badge">🐔 Panduan Praktis • 5 Ekor Ayam</span>
+    <h1>Rancangan & Strategi Dasar Ternak Ayam Petelur</h1>
+    <p>Mulai dari nol dengan sistem sederhana: kandang, pakan, air, kesehatan, pencatatan, HPP, penjualan, sampai evaluasi usaha.</p>
+    <div class="hero-stats">
+      <div class="stat"><b>5</b><span>Ayam awal</span></div>
+      <div class="stat"><b>550 g</b><span>Contoh pakan/hari</span></div>
+      <div class="stat"><b>16,5 kg</b><span>Contoh pakan/bulan</span></div>
+      <div class="stat"><b>30 hari</b><span>Data evaluasi awal</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <button class="mobile-menu" id="mobileMenu">Buka Daftar Isi</button>
+    <div class="sidebar-title">📚 Daftar Isi</div>
+    <input class="search" id="search" type="search" placeholder="Cari isi website...">
+    <div id="toc"></div>
+  </aside>
+
+  <main id="content">
+    
+<div class="spacer"></div><h1>RANCANGAN &amp; STRATEGI DASAR TERNAK AYAM PETELUR — 5 EKOR</h1><div class="spacer"></div><p>Bisa. Kalau mulai <strong>hanya 5 ekor ayam petelur</strong>, saya justru menyarankan jangan langsung berpikir “usaha besar”. Anggap 5 ekor ini sebagai <strong>proyek belajar + pembuktian apakah usaha ini cocok dan menguntungkan</strong>.</p><div class="spacer"></div><p>Yang paling penting: <strong>pakan, air, kandang, kesehatan, pencatatan, dan HPP</strong>. Kalau 5 ekor saja pencatatannya sudah rapi, nanti menaikkan menjadi 20, 50, atau 100 ekor jauh lebih mudah.</p><div class="spacer"></div><p>Untuk ayam layer dewasa, kebutuhan pakan umumnya sekitar <strong>100–120 gram/ekor/hari</strong>, tergantung strain, umur, bobot, dan kondisi produksi. (<a href="https://repository.pertanian.go.id/server/api/core/bitstreams/cfcffa19-6c49-412f-8410-3f65f1299454/content?utm_source=chatgpt.com" target="_blank" rel="noopener">repository.pertanian.go.id</a>)</p><div class="spacer"></div><hr><div class="spacer"></div><h1>1. TARGET AWAL: 5 EKOR AYAM</h1><div class="spacer"></div><p>Saya sarankan sistem awal seperti ini:</p><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Komponen</th><th>Target awal</th></tr></thead><tbody><tr><td>Ayam</td><td>5 ekor betina</td></tr><tr><td>Status ayam</td><td><strong>Pullet siap produksi</strong> / sudah mendekati masa bertelur</td></tr><tr><td>Umur ideal pembelian</td><td>sekitar 16–18 minggu</td></tr><tr><td>Target mulai produksi</td><td>sekitar 18–20 minggu, tergantung strain</td></tr><tr><td>Sistem</td><td>Kandang sederhana</td></tr><tr><td>Pakan</td><td>Pakan komplit khusus layer</td></tr><tr><td>Air</td><td>Selalu tersedia</td></tr><tr><td>Pencatatan</td><td>Setiap hari</td></tr><tr><td>Evaluasi</td><td>Setiap 7 hari</td></tr><tr><td>Evaluasi usaha</td><td>Setiap bulan</td></tr></tbody></table></div><div class="spacer"></div><p><strong>Untuk pemula saya tidak menyarankan membeli DOC.</strong></p><div class="spacer"></div><p>Kenapa?</p><div class="spacer"></div><p>Karena kalau membeli DOC, Anda harus melewati:</p><div class="spacer"></div><blockquote>DOC → starter → grower → pullet → layer → produksi telur.</blockquote><div class="spacer"></div><p>Artinya Anda harus belajar pemanasan, brooding, vaksinasi, pergantian pakan, pertumbuhan, dan sebagainya.</p><div class="spacer"></div><p>Kalau tujuan Anda adalah <strong>belajar bisnis ayam telur</strong>, lebih sederhana membeli <strong>5 ekor pullet betina yang sehat dan mendekati umur produksi</strong>.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>2. SEBELUM MEMBELI AYAM, SIAPKAN DULU</h1><div class="spacer"></div><p>Jangan:</p><div class="spacer"></div><blockquote>beli ayam → baru mencari kandang.</blockquote><div class="spacer"></div><p>Urutannya harus:</p><div class="spacer"></div><blockquote><strong>Kandang → peralatan → pakan → air → pencatatan → baru ayam.</strong></blockquote><div class="spacer"></div><h2>Peralatan minimum</h2><div class="spacer"></div><p>Untuk 5 ekor:</p><div class="spacer"></div><li class="numbered">Kandang</li><li class="numbered">Tempat pakan</li><li class="numbered">Tempat minum</li><li class="numbered">Tempat bertelur/nest box</li><li class="numbered">Tempat penyimpanan pakan</li><li class="numbered">Timbangan kecil</li><li class="numbered">Ember</li><li class="numbered">Sapu</li><li class="numbered">Sekop kecil</li><li class="numbered">Wadah telur</li><li class="numbered">Lampu bila diperlukan</li><li class="numbered">Disinfektan</li><li class="numbered">Buku catatan/Excel</li><div class="spacer"></div><hr><div class="spacer"></div><h1>3. KANDANG 5 EKOR</h1><div class="spacer"></div><p>Tidak perlu kandang mahal.</p><div class="spacer"></div><p>Yang penting:</p><div class="spacer"></div><li>kering</li><li>tidak becek</li><li>ventilasi bagus</li><li>tidak terlalu panas</li><li>tidak terkena hujan langsung</li><li>aman dari anjing, kucing, tikus, ular, dll.</li><li>mudah dibersihkan.</li><div class="spacer"></div><p>Jangan membuat kandang terlalu tertutup.</p><div class="spacer"></div><p>Ayam membutuhkan sirkulasi udara yang baik.</p><div class="spacer"></div><p>Prinsip sederhananya:</p><div class="spacer"></div><p><strong>udara masuk → udara keluar → kandang tidak pengap.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>4. TEMPAT BERTELUR</h1><div class="spacer"></div><p>Untuk 5 ekor tidak perlu membuat 5 kotak.</p><div class="spacer"></div><p>Bisa dibuat:</p><div class="spacer"></div><p><strong>1–2 nest box untuk 5 ayam.</strong></p><div class="spacer"></div><p>Gunakan bahan yang mudah dibersihkan.</p><div class="spacer"></div><p>Isi dengan bahan alas yang kering.</p><div class="spacer"></div><p>Tujuannya supaya:</p><div class="spacer"></div><blockquote>ayam nyaman bertelur → telur tidak mudah pecah → telur lebih bersih.</blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>5. PAKAN: INI YANG PALING PENTING</h1><div class="spacer"></div><p>Kalau ayam Anda sudah masuk fase <strong>layer</strong>, gunakan pakan khusus ayam petelur/layer.</p><div class="spacer"></div><p>Jangan asal:</p><div class="spacer"></div><blockquote>dedak + nasi + jagung</blockquote><div class="spacer"></div><p>lalu berharap produksi telur bagus.</p><div class="spacer"></div><p>Ayam petelur membutuhkan nutrisi yang sesuai fase produksinya. Kementerian Pertanian juga menekankan bahwa pakan harus memenuhi kebutuhan nutrisi dan disimpan secara higienis. (<a href="https://pustaka.bppsdmp.pertanian.go.id/info-literasi/info-literasi-rahasia-sukses-beternak-ayam-petelur?utm_source=chatgpt.com" target="_blank" rel="noopener">pustaka.bppsdmp.pertanian.go.id</a>)</p><div class="spacer"></div><p>Untuk contoh praktis, kita gunakan angka:</p><div class="spacer"></div><p><strong>110 gram/ekor/hari.</strong></p><div class="spacer"></div><p>Maka:</p><div class="spacer"></div><p>5 ayam × 110 gram = <strong>550 gram/hari</strong></p><div class="spacer"></div><p>Dalam 30 hari:</p><div class="spacer"></div><p>550 × 30 = <strong>16.500 gram</strong></p><div class="spacer"></div><p>= <strong>16,5 kg/bulan.</strong></p><div class="spacer"></div><p>Jadi 5 ekor ayam membutuhkan kira-kira:</p><div class="spacer"></div><blockquote><strong>16,5 kg pakan per bulan</strong></blockquote><div class="spacer"></div><p>dengan asumsi konsumsi 110 g/ekor/hari.</p><div class="spacer"></div><p>Kebutuhan aktual tetap harus mengikuti kondisi ayam dan label pakan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>6. JADWAL PAKAN HARIAN</h1><div class="spacer"></div><p>Saya sarankan dibuat <strong>2 kali pemberian</strong> supaya mudah dikontrol.</p><div class="spacer"></div><h3>PAGI — 06.00–07.00</h3><div class="spacer"></div><p>Berikan sekitar:</p><div class="spacer"></div><p><strong>50% kebutuhan harian.</strong></p><div class="spacer"></div><p>Total kebutuhan:</p><div class="spacer"></div><p>550 gram/hari.</p><div class="spacer"></div><p>Pagi:</p><div class="spacer"></div><p><strong>275 gram</strong></p><div class="spacer"></div><p>atau sekitar:</p><div class="spacer"></div><p><strong>55 gram/ayam.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h3>SORE — 15.00–16.00</h3><div class="spacer"></div><p>Berikan:</p><div class="spacer"></div><p><strong>275 gram</strong></p><div class="spacer"></div><p>atau:</p><div class="spacer"></div><p><strong>55 gram/ayam.</strong></p><div class="spacer"></div><p>Jadwal dua kali sehari seperti ini juga digunakan dalam praktik peternakan layer, dengan pembagian pagi dan sore. (<a href="https://repository.pertanian.go.id/items/909508de-ee68-4cd4-b011-1ca7e543723c/full?utm_source=chatgpt.com" target="_blank" rel="noopener">repository.pertanian.go.id</a>)</p><div class="spacer"></div><p>Tetapi jangan terpaku pada angka saya jika ayam Anda memiliki rekomendasi pakan khusus dari produsennya.</p><div class="spacer"></div><p><strong>Label pakan dan kondisi ayam adalah acuan utama.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>7. AIR MINUM</h1><div class="spacer"></div><p>Ini jangan sampai dilupakan.</p><div class="spacer"></div><p>Air harus:</p><div class="spacer"></div><blockquote><strong>tersedia sepanjang waktu.</strong></blockquote><div class="spacer"></div><p>Sebagai gambaran, beberapa pedoman menyebut kebutuhan air sekitar <strong>2× konsumsi pakan</strong>, sehingga untuk 5 ayam dengan konsumsi 550 g pakan/hari, secara kasar bisa sekitar <strong>1,1 liter/hari</strong>, tetapi kebutuhan meningkat ketika cuaca panas. (<a href="https://repository.pertanian.go.id/bitstreams/8ef04fac-b37b-4041-b9c8-2c338d31a4c4/download?utm_source=chatgpt.com" target="_blank" rel="noopener">repository.pertanian.go.id</a>)</p><div class="spacer"></div><p>Jadi jangan berpikir:</p><div class="spacer"></div><blockquote>&quot;Saya kasih 1 liter saja.&quot;</blockquote><div class="spacer"></div><p>Lebih aman:</p><div class="spacer"></div><p><strong>sediakan air lebih dari kebutuhan minimum dan cek beberapa kali sehari.</strong></p><div class="spacer"></div><p>Yang Anda cek:</p><div class="spacer"></div><li>air masih ada?</li><li>kotor?</li><li>berlendir?</li><li>tempat minum bocor?</li><li>terkena kotoran?</li><div class="spacer"></div><p>Kalau kotor → <strong>ganti.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>8. JADWAL HARIAN YANG SANGAT SEDERHANA</h1><div class="spacer"></div><p>Ini yang saya sarankan Anda lakukan <strong>setiap hari</strong>.</p><div class="spacer"></div><h2>05.30–06.00 — CEK AYAM</h2><div class="spacer"></div><p>Lihat satu per satu.</p><div class="spacer"></div><p>Jangan hanya melihat dari jauh.</p><div class="spacer"></div><p>Perhatikan:</p><div class="spacer"></div><li>ayam aktif?</li><li>berdiri normal?</li><li>makan?</li><li>minum?</li><li>ada yang menyendiri?</li><li>bulu berdiri?</li><li>mata normal?</li><li>hidung normal?</li><li>kotoran normal?</li><li>ada ayam yang terlihat lemah?</li><div class="spacer"></div><p><strong>Jangan menunggu ayam mati baru mencari tahu.</strong></p><div class="spacer"></div><p>Ayam yang terlihat berbeda dari 4 ayam lainnya harus diperhatikan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>9. 06.00–07.00 — PAKAN PAGI</h1><div class="spacer"></div><p>Timbang pakan.</p><div class="spacer"></div><p>Untuk contoh:</p><div class="spacer"></div><p><strong>275 gram untuk 5 ayam.</strong></p><div class="spacer"></div><p>Berikan.</p><div class="spacer"></div><p>Kemudian cek tempat pakan.</p><div class="spacer"></div><p>Jangan sampai:</p><div class="spacer"></div><li>pakan basah</li><li>pakan berjamur</li><li>pakan bercampur kotoran</li><li>tempat pakan terlalu kosong dalam waktu lama.</li><div class="spacer"></div><hr><div class="spacer"></div><h1>10. 06.00–07.00 — AIR</h1><div class="spacer"></div><p>Bersihkan tempat minum.</p><div class="spacer"></div><p>Isi air bersih.</p><div class="spacer"></div><p>Jangan hanya menambahkan air baru ke air lama yang sudah kotor.</p><div class="spacer"></div><p>Kalau sudah kotor:</p><div class="spacer"></div><p><strong>buang → cuci → isi kembali.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>11. 07.00–08.00 — BERSIHKAN KANDANG</h1><div class="spacer"></div><p>Ambil:</p><div class="spacer"></div><li>kotoran yang menumpuk</li><li>pakan tercecer</li><li>bulu berlebihan</li><li>sampah</li><li>telur pecah.</li><div class="spacer"></div><p>Tidak harus membuat kandang steril setiap hari.</p><div class="spacer"></div><p>Yang penting:</p><div class="spacer"></div><blockquote><strong>bersih, kering, tidak bau menyengat, dan tidak lembap.</strong></blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>12. 08.00–10.00 — CEK TELUR</h1><div class="spacer"></div><p>Periksa nest box.</p><div class="spacer"></div><p>Telur yang ditemukan:</p><div class="spacer"></div><li class="numbered">ambil</li><li class="numbered">hitung</li><li class="numbered">periksa kondisi</li><li class="numbered">pisahkan telur retak</li><li class="numbered">simpan dengan baik.</li><div class="spacer"></div><p>Catat jumlahnya.</p><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><p><strong>20 Agustus 2026</strong></p><div class="spacer"></div><p>Ayam = 5</p><div class="spacer"></div><p>Telur = 3</p><div class="spacer"></div><p>Berarti:</p><div class="spacer"></div><p><strong>produksi = 3 butir</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>13. SORE — 15.00–16.00</h1><div class="spacer"></div><p>Lakukan:</p><div class="spacer"></div><h3>1. Cek ayam</h3><div class="spacer"></div><p>Apakah semuanya masih sehat?</p><div class="spacer"></div><h3>2. Cek air</h3><div class="spacer"></div><p>Masih cukup?</p><div class="spacer"></div><h3>3. Berikan pakan</h3><div class="spacer"></div><p>275 gram untuk contoh perhitungan kita.</p><div class="spacer"></div><h3>4. Cek kandang</h3><div class="spacer"></div><p>Apakah ada kebocoran?</p><div class="spacer"></div><p>Apakah ada predator?</p><div class="spacer"></div><p>Apakah ada tikus?</p><div class="spacer"></div><h3>5. Cek telur sekali lagi</h3><div class="spacer"></div><p>Catat total produksi hari itu.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>14. MALAM — 18.00–19.00</h1><div class="spacer"></div><p>Tidak perlu mengganggu ayam.</p><div class="spacer"></div><p>Cukup pastikan:</p><div class="spacer"></div><li>kandang aman</li><li>pintu terkunci</li><li>tidak ada predator</li><li>air masih tersedia</li><li>ayam masuk/beristirahat normal.</li><div class="spacer"></div><hr><div class="spacer"></div><h1>15. JADWAL HARIAN ANDA</h1><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Waktu</th><th>Kegiatan</th></tr></thead><tbody><tr><td>05.30</td><td>Cek kondisi 5 ayam</td></tr><tr><td>06.00</td><td>Bersihkan tempat minum</td></tr><tr><td>06.15</td><td>Pakan pagi</td></tr><tr><td>06.30</td><td>Bersihkan kandang</td></tr><tr><td>07.00</td><td>Cek telur</td></tr><tr><td>10.00</td><td>Cek air/ayam</td></tr><tr><td>15.00</td><td>Cek ayam &amp; kandang</td></tr><tr><td>15.30</td><td>Pakan sore</td></tr><tr><td>16.00</td><td>Cek telur</td></tr><tr><td>18.00</td><td>Pastikan kandang aman</td></tr><tr><td>20.00</td><td>Rekap data hari itu</td></tr></tbody></table></div><div class="spacer"></div><hr><div class="spacer"></div><h1>16. JANGAN HANYA MENCATAT TELUR</h1><div class="spacer"></div><p>Ini kesalahan pemula.</p><div class="spacer"></div><p>Jangan hanya mencatat:</p><div class="spacer"></div><blockquote>&quot;Hari ini dapat 4 telur.&quot;</blockquote><div class="spacer"></div><p>Anda harus mencatat <strong>uang juga.</strong></p><div class="spacer"></div><p>Buat data seperti ini.</p><div class="spacer"></div><h2>SHEET 1 — DATA HARIAN</h2><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ayam</th><th>Pakan (kg)</th><th>Harga/kg</th><th>Biaya Pakan</th><th>Telur</th><th>Telur Retak</th><th>Telur Terjual</th><th>Harga Jual</th><th>Omzet</th></tr></thead><tbody><tr><td>20/08/26</td><td>5</td><td>0,55</td><td>Rp...</td><td>Rp...</td><td>3</td><td>0</td><td>3</td><td>Rp...</td><td>Rp...</td></tr><tr><td>21/08/26</td><td>5</td><td>0,55</td><td>Rp...</td><td>Rp...</td><td>4</td><td>0</td><td>4</td><td>Rp...</td><td>Rp...</td></tr><tr><td>22/08/26</td><td>5</td><td>0,55</td><td>Rp...</td><td>Rp...</td><td>5</td><td>0</td><td>5</td><td>Rp...</td><td>Rp...</td></tr></tbody></table></div><div class="spacer"></div><p>Dengan begini Anda mulai punya <strong>data bisnis nyata</strong>.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>17. DATA KEDUA: BIAYA</h1><div class="spacer"></div><p>Buat sheet:</p><div class="spacer"></div><h2>BIAYA USAHA</h2><div class="spacer"></div><p>Pisahkan menjadi:</p><div class="spacer"></div><h3>A. Biaya tetap</h3><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><li>kandang</li><li>tempat pakan</li><li>tempat minum</li><li>nest box</li><li>timbangan</li><li>peralatan.</li><div class="spacer"></div><h3>B. Biaya berjalan</h3><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><li>pakan</li><li>vitamin jika diperlukan</li><li>vaksin/obat sesuai program kesehatan</li><li>disinfektan</li><li>listrik</li><li>air</li><li>kemasan telur</li><li>transportasi.</li><div class="spacer"></div><hr><div class="spacer"></div><h1>18. JANGAN MASUKKAN SEMUA BIAYA KANDANG KE 1 BULAN</h1><div class="spacer"></div><p>Misalnya:</p><div class="spacer"></div><p>Kandang:</p><div class="spacer"></div><p><strong>Rp1.000.000</strong></p><div class="spacer"></div><p>Jangan langsung mengatakan:</p><div class="spacer"></div><blockquote>bulan pertama biaya Rp1.000.000.</blockquote><div class="spacer"></div><p>Karena kandang digunakan lebih dari satu bulan.</p><div class="spacer"></div><p>Anda bisa menggunakan pendekatan <strong>penyusutan</strong>.</p><div class="spacer"></div><p>Misalnya asumsi umur ekonomis kandang:</p><div class="spacer"></div><p><strong>36 bulan</strong></p><div class="spacer"></div><p>Maka:</p><div class="spacer"></div><p>Rp1.000.000 ÷ 36</p><div class="spacer"></div><p>= sekitar <strong>Rp27.778/bulan</strong></p><div class="spacer"></div><p>Ini lebih masuk akal untuk perhitungan HPP.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>19. APA ITU HPP?</h1><div class="spacer"></div><p>HPP = <strong>Harga Pokok Produksi.</strong></p><div class="spacer"></div><p>Sederhananya:</p><div class="spacer"></div><blockquote><strong>berapa biaya yang sebenarnya Anda keluarkan untuk menghasilkan telur.</strong></blockquote><div class="spacer"></div><p>Misalnya satu bulan:</p><div class="spacer"></div><p>Pakan = Rp300.000</p><div class="spacer"></div><p>Air = Rp20.000</p><div class="spacer"></div><p>Listrik = Rp15.000</p><div class="spacer"></div><p>Disinfektan = Rp10.000</p><div class="spacer"></div><p>Penyusutan kandang = Rp27.778</p><div class="spacer"></div><p>Biaya lain = Rp20.000</p><div class="spacer"></div><p>Total:</p><div class="spacer"></div><p><strong>Rp392.778</strong></p><div class="spacer"></div><p>Misalnya produksi:</p><div class="spacer"></div><p><strong>100 telur</strong></p><div class="spacer"></div><p>Maka:</p><div class="spacer"></div><p>Rp392.778 ÷ 100</p><div class="spacer"></div><p>= <strong>Rp3.928/telur</strong></p><div class="spacer"></div><p>Jadi HPP telur Anda sekitar:</p><div class="spacer"></div><p><strong>Rp3.928/butir.</strong></p><div class="spacer"></div><p>Kalau Anda menjual:</p><div class="spacer"></div><p><strong>Rp5.000/butir</strong></p><div class="spacer"></div><p>maka margin kotor sebelum biaya lain:</p><div class="spacer"></div><p>Rp5.000 − Rp3.928</p><div class="spacer"></div><p>= <strong>Rp1.072/butir.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>20. TAPI ADA HAL PENTING</h1><div class="spacer"></div><p>Jangan menghitung HPP hanya berdasarkan:</p><div class="spacer"></div><blockquote>uang yang keluar.</blockquote><div class="spacer"></div><p>Anda harus mencatat <strong>semua biaya ekonomi yang relevan</strong>, termasuk penyusutan peralatan.</p><div class="spacer"></div><p>Dan khusus usaha 5 ekor, ada satu masalah besar:</p><div class="spacer"></div><h3>SKALA TERLALU KECIL.</h3><div class="spacer"></div><p>Misalnya Anda membeli kandang Rp1 juta.</p><div class="spacer"></div><p>Biaya kandang tersebut dibebankan kepada hanya 5 ayam.</p><div class="spacer"></div><p>Akibatnya HPP per telur bisa terlihat sangat tinggi.</p><div class="spacer"></div><p>Jadi jangan langsung menyimpulkan:</p><div class="spacer"></div><blockquote>&quot;Ternak ayam tidak untung.&quot;</blockquote><div class="spacer"></div><p>Bisa jadi masalahnya bukan ayamnya.</p><div class="spacer"></div><p>Masalahnya:</p><div class="spacer"></div><blockquote><strong>jumlah ayam terlalu sedikit untuk menanggung biaya tetap.</strong></blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>21. CONTOH PERHITUNGAN 5 AYAM</h1><div class="spacer"></div><p>Kita gunakan contoh <strong>bukan harga pasar</strong>, supaya Anda tinggal mengganti dengan harga nyata di daerah Anda.</p><div class="spacer"></div><p>Misalnya:</p><div class="spacer"></div><p>Pakan:</p><div class="spacer"></div><p><strong>Rp8.000/kg</strong></p><div class="spacer"></div><p>Kebutuhan:</p><div class="spacer"></div><p>16,5 kg/bulan.</p><div class="spacer"></div><p>Biaya pakan:</p><div class="spacer"></div><p>16,5 × Rp8.000</p><div class="spacer"></div><p>= <strong>Rp132.000</strong></p><div class="spacer"></div><p>Misalnya produksi telur:</p><div class="spacer"></div><p>100 butir/bulan.</p><div class="spacer"></div><p>Biaya pakan per telur:</p><div class="spacer"></div><p>Rp132.000 ÷ 100</p><div class="spacer"></div><p>= <strong>Rp1.320/telur.</strong></p><div class="spacer"></div><p>Belum termasuk:</p><div class="spacer"></div><li>kandang</li><li>air</li><li>listrik</li><li>vitamin/obat</li><li>disinfektan</li><li>kemasan</li><li>ayam</li><li>penyusutan.</li><div class="spacer"></div><p>Maka <strong>jangan mengatakan HPP Anda Rp1.320.</strong></p><div class="spacer"></div><p>Itu baru:</p><div class="spacer"></div><blockquote><strong>biaya pakan per telur.</strong></blockquote><div class="spacer"></div><p>Bukan HPP lengkap.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>22. DATA YANG WAJIB ANDA CATAT</h1><div class="spacer"></div><p>Minimal ada 5 kelompok data.</p><div class="spacer"></div><h2>DATA AYAM</h2><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Data</th><th>Catatan</th></tr></thead><tbody><tr><td>Jumlah ayam</td><td>5</td></tr><tr><td>Umur</td><td>... minggu</td></tr><tr><td>Strain</td><td>...</td></tr><tr><td>Tanggal beli</td><td>...</td></tr><tr><td>Harga/ekor</td><td>...</td></tr><tr><td>Total harga</td><td>...</td></tr></tbody></table></div><div class="spacer"></div><hr><div class="spacer"></div><h1>23. DATA PAKAN</h1><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Stok Awal</th><th>Pembelian</th><th>Pemakaian</th><th>Sisa</th></tr></thead><tbody><tr><td>20/8</td><td>10 kg</td><td>0</td><td>0,55</td><td>9,45</td></tr><tr><td>21/8</td><td>9,45</td><td>0</td><td>0,55</td><td>8,90</td></tr></tbody></table></div><div class="spacer"></div><p>Dengan ini Anda tahu apakah pakan benar-benar digunakan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>24. DATA PRODUKSI</h1><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ayam</th><th>Telur Bagus</th><th>Retak</th><th>Rusak</th><th>Total</th></tr></thead><tbody><tr><td>20/8</td><td>5</td><td>3</td><td>0</td><td>0</td><td>3</td></tr><tr><td>21/8</td><td>5</td><td>4</td><td>0</td><td>0</td><td>4</td></tr><tr><td>22/8</td><td>5</td><td>5</td><td>0</td><td>0</td><td>5</td></tr></tbody></table></div><div class="spacer"></div><hr><div class="spacer"></div><h1>25. HITUNG PRODUKTIVITAS AYAM</h1><div class="spacer"></div><p>Ini penting.</p><div class="spacer"></div><p>Rumus:</p><div class="spacer"></div><p><strong>Hen Day Production (HDP)</strong></p><div class="spacer"></div><p>= jumlah telur ÷ jumlah ayam × 100%</p><div class="spacer"></div><p>Misalnya:</p><div class="spacer"></div><p>5 ayam menghasilkan 4 telur.</p><div class="spacer"></div><p>4 ÷ 5 × 100%</p><div class="spacer"></div><p>= <strong>80%</strong></p><div class="spacer"></div><p>Kalau menghasilkan 5 telur:</p><div class="spacer"></div><p>5 ÷ 5 × 100%</p><div class="spacer"></div><p>= <strong>100%</strong></p><div class="spacer"></div><p>Ini jauh lebih informatif daripada hanya mengatakan:</p><div class="spacer"></div><blockquote>&quot;Hari ini dapat 5 telur.&quot;</blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>26. DATA PENJUALAN</h1><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Telur</th><th>Harga</th><th>Omzet</th></tr></thead><tbody><tr><td>20/8</td><td>3</td><td>Rp5.000</td><td>Rp15.000</td></tr><tr><td>21/8</td><td>4</td><td>Rp5.000</td><td>Rp20.000</td></tr><tr><td>22/8</td><td>5</td><td>Rp5.000</td><td>Rp25.000</td></tr></tbody></table></div><div class="spacer"></div><p>Kemudian:</p><div class="spacer"></div><p><strong>Omzet bulan = total semua penjualan.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>27. DATA KEMATIAN</h1><div class="spacer"></div><p>Kalau ada ayam sakit atau mati, <strong>wajib dicatat.</strong></p><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Tanggal</th><th>Ayam</th><th>Kondisi</th><th>Tindakan</th><th>Hasil</th></tr></thead><tbody><tr><td>20/8</td><td>A1</td><td>Normal</td><td>-</td><td>Normal</td></tr><tr><td>21/8</td><td>A2</td><td>Lesu</td><td>Dipisahkan</td><td>Pantau</td></tr><tr><td>22/8</td><td>A2</td><td>Sakit</td><td>Hubungi petugas/dokter hewan</td><td>...</td></tr></tbody></table></div><div class="spacer"></div><p>Jangan sembarangan memberikan antibiotik atau obat berdasarkan tebakan.</p><div class="spacer"></div><p>Kalau ayam menunjukkan penyakit, terutama kematian mendadak atau beberapa ayam sakit sekaligus, <strong>hubungi dokter hewan/penyuluh/petugas kesehatan hewan setempat.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>28. BIOSEKURITI</h1><div class="spacer"></div><p>Ini sering disepelekan peternak kecil.</p><div class="spacer"></div><p>Padahal Kementerian Pertanian pada 2026 kembali menekankan bahwa vaksinasi saja tidak cukup; biosekuriti seperti kebersihan kandang, pembatasan lalu lintas orang/kendaraan, disinfeksi, serta menjaga kebersihan pakan dan peralatan penting untuk mengurangi risiko penyakit. (<a href="https://bptusembawa.ditjenpkh.pertanian.go.id/berita/serial-edukasi-peternakan-episode-21--tips-keren-menjaga-keamanan-kandang-ayam?utm_source=chatgpt.com" target="_blank" rel="noopener">bptusembawa.ditjenpkh.pertanian.go.id</a>)</p><div class="spacer"></div><p>Jadi buat aturan:</p><div class="spacer"></div><h3>ORANG</h3><div class="spacer"></div><p>Jangan sembarang orang keluar-masuk kandang.</p><div class="spacer"></div><h3>SEPATU</h3><div class="spacer"></div><p>Kalau memungkinkan gunakan sandal/sepatu khusus kandang.</p><div class="spacer"></div><h3>PERALATAN</h3><div class="spacer"></div><p>Jangan digunakan untuk kandang lain.</p><div class="spacer"></div><h3>PAKAN</h3><div class="spacer"></div><p>Simpan kering.</p><div class="spacer"></div><h3>AIR</h3><div class="spacer"></div><p>Gunakan air yang bersih.</p><div class="spacer"></div><h3>HEWAN LAIN</h3><div class="spacer"></div><p>Usahakan:</p><div class="spacer"></div><blockquote>ayam tidak bercampur dengan ayam tetangga.</blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>29. JANGAN SEMBARANG MEMBELI AYAM</h1><div class="spacer"></div><p>Saat membeli 5 ayam, jangan hanya melihat:</p><div class="spacer"></div><blockquote>&quot;wah, ayamnya besar.&quot;</blockquote><div class="spacer"></div><p>Periksa:</p><div class="spacer"></div><li>mata cerah</li><li>aktif</li><li>bulu relatif rapi</li><li>kaki normal</li><li>tidak pincang</li><li>tidak terlihat sesak</li><li>tidak keluar cairan abnormal dari hidung</li><li>kondisi tubuh baik</li><li>kloaka tidak kotor berlebihan</li><li>riwayat vaksinasi jelas</li><li>umur jelas</li><li>asal ayam jelas.</li><div class="spacer"></div><p>Dan <strong>jangan mencampurkan ayam baru langsung dengan ayam lama</strong> jika nantinya Anda menambah populasi. Idealnya ada prosedur karantina/pemisahan sesuai arahan tenaga kesehatan hewan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>30. VAKSIN</h1><div class="spacer"></div><p>Ini bagian yang jangan Anda tebak sendiri.</p><div class="spacer"></div><p>Program vaksin tergantung:</p><div class="spacer"></div><li>umur</li><li>strain</li><li>riwayat vaksin</li><li>wilayah</li><li>penyakit yang umum di daerah</li><li>kondisi peternakan.</li><div class="spacer"></div><p>Kalau Anda membeli pullet dari breeder/peternak, minta:</p><div class="spacer"></div><blockquote><strong>catatan vaksinasi.</strong></blockquote><div class="spacer"></div><p>Jangan membeli ayam tanpa tahu:</p><div class="spacer"></div><blockquote>&quot;Ayam ini sudah vaksin apa saja?&quot;</blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>31. PAKAN JANGAN SERING DIGANTI</h1><div class="spacer"></div><p>Misalnya hari ini:</p><div class="spacer"></div><p><strong>Pakan A</strong></p><div class="spacer"></div><p>Besok:</p><div class="spacer"></div><p><strong>Pakan B</strong></p><div class="spacer"></div><p>Lusa:</p><div class="spacer"></div><p><strong>Pakan C</strong></p><div class="spacer"></div><p>Jangan seperti itu.</p><div class="spacer"></div><p>Perubahan pakan mendadak dapat mengganggu konsumsi dan produksi.</p><div class="spacer"></div><p>Kalau memang harus mengganti merek/jenis pakan, lakukan secara bertahap sesuai rekomendasi produsen/tenaga teknis.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>32. JANGAN TERLALU BANYAK MEMBERIKAN TAMBAHAN</h1><div class="spacer"></div><p>Kesalahan pemula:</p><div class="spacer"></div><blockquote>&quot;Telurnya sedikit, kasih jagung.&quot;</blockquote><div class="spacer"></div><p>Besok:</p><div class="spacer"></div><blockquote>&quot;Kasih dedak.&quot;</blockquote><div class="spacer"></div><p>Lusa:</p><div class="spacer"></div><blockquote>&quot;Kasih nasi.&quot;</blockquote><div class="spacer"></div><p>Kemudian:</p><div class="spacer"></div><blockquote>&quot;Kasih vitamin.&quot;</blockquote><div class="spacer"></div><p>Akhirnya tidak tahu sebenarnya ayam makan apa.</p><div class="spacer"></div><p>Untuk 5 ekor pertama:</p><div class="spacer"></div><h3>Gunakan pakan layer komplit.</h3><div class="spacer"></div><p>Lebih mudah menghitung:</p><div class="spacer"></div><blockquote>konsumsi → biaya → produksi → HPP.</blockquote><div class="spacer"></div><p>Setelah Anda memahami dasar nutrisi dan formulasi ransum, baru eksperimen.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>33. TARGET DATA 30 HARI</h1><div class="spacer"></div><p>Jangan menilai usaha berdasarkan:</p><div class="spacer"></div><blockquote>&quot;kemarin dapat 5 telur.&quot;</blockquote><div class="spacer"></div><p>Gunakan minimal:</p><div class="spacer"></div><p><strong>30 hari data.</strong></p><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><div class="table-wrap"><table><thead><tr><th>Indikator</th><th>Hasil</th></tr></thead><tbody><tr><td>Ayam awal</td><td>5</td></tr><tr><td>Ayam akhir</td><td>5</td></tr><tr><td>Total pakan</td><td>16,5 kg</td></tr><tr><td>Total telur</td><td>110</td></tr><tr><td>Telur bagus</td><td>106</td></tr><tr><td>Telur retak</td><td>4</td></tr><tr><td>Total penjualan</td><td>Rp...</td></tr><tr><td>Biaya pakan</td><td>Rp...</td></tr><tr><td>Biaya lain</td><td>Rp...</td></tr><tr><td>HPP/telur</td><td>Rp...</td></tr><tr><td>Laba/rugi</td><td>Rp...</td></tr></tbody></table></div><div class="spacer"></div><p>Setelah 30 hari Anda baru bisa melihat apakah sistem Anda bekerja.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>34. RUMUS EXCEL YANG AKAN ANDA PAKAI</h1><div class="spacer"></div><p>Misalnya:</p><div class="spacer"></div><h3>Biaya pakan</h3><div class="spacer"></div><pre><code>=Jumlah_Pakan*Harga_Pakan</code></pre><div class="spacer"></div><h3>Omzet</h3><div class="spacer"></div><pre><code>=Jumlah_Telur_Terjual*Harga_Jual</code></pre><div class="spacer"></div><h3>HPP</h3><div class="spacer"></div><pre><code>=Total_Biaya/Total_Telur</code></pre><div class="spacer"></div><h3>HDP</h3><div class="spacer"></div><pre><code>=Total_Telur/Jumlah_Ayam*100%</code></pre><div class="spacer"></div><h3>Laba</h3><div class="spacer"></div><pre><code>=Omzet-Total_Biaya</code></pre><div class="spacer"></div><h3>Biaya pakan/telur</h3><div class="spacer"></div><pre><code>=Total_Biaya_Pakan/Total_Telur</code></pre><div class="spacer"></div><hr><div class="spacer"></div><h1>35. JANGAN LUPA BIAYA AYAM</h1><div class="spacer"></div><p>Misalnya Anda membeli:</p><div class="spacer"></div><p>5 ayam × Rp100.000</p><div class="spacer"></div><p>= <strong>Rp500.000</strong></p><div class="spacer"></div><p>Jangan menganggap Rp500.000 itu hilang begitu saja pada bulan pertama.</p><div class="spacer"></div><p>Ayam adalah <strong>aset biologis/ternak yang menghasilkan telur</strong> dan nantinya memiliki nilai afkir.</p><div class="spacer"></div><p>Untuk pencatatan sederhana, Anda dapat mencatat:</p><div class="spacer"></div><p><strong>Harga pembelian ayam</strong></p><div class="spacer"></div><p>dan kemudian memperhitungkan nilai ekonomisnya dalam model HPP yang Anda gunakan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>36. PEMIKIRAN YANG BENAR</h1><div class="spacer"></div><p>Jangan hanya bertanya:</p><div class="spacer"></div><blockquote>&quot;Berapa telur yang saya dapat?&quot;</blockquote><div class="spacer"></div><p>Tanyakan 7 hal:</p><div class="spacer"></div><li class="numbered"><strong>Berapa pakan yang saya habiskan?</strong></li><li class="numbered"><strong>Berapa telur yang dihasilkan?</strong></li><li class="numbered"><strong>Berapa telur yang rusak?</strong></li><li class="numbered"><strong>Berapa biaya menghasilkan satu telur?</strong></li><li class="numbered"><strong>Berapa harga jual telur?</strong></li><li class="numbered"><strong>Berapa laba sebenarnya?</strong></li><li class="numbered"><strong>Apa penyebab produksi turun?</strong></li><div class="spacer"></div><p>Kalau Anda sudah bisa menjawab 7 pertanyaan ini, Anda sudah mulai <strong>beternak sebagai pengusaha</strong>, bukan sekadar memelihara ayam.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>37. JADWAL MINGGUAN</h1><div class="spacer"></div><p>Selain pekerjaan harian, lakukan setiap minggu.</p><div class="spacer"></div><h3>SENIN</h3><div class="spacer"></div><p>Cek:</p><div class="spacer"></div><li>stok pakan</li><li>kondisi kandang</li><li>kondisi ayam.</li><div class="spacer"></div><h3>SELASA</h3><div class="spacer"></div><p>Cek:</p><div class="spacer"></div><li>tempat minum</li><li>tempat pakan</li><li>nest box.</li><div class="spacer"></div><h3>RABU</h3><div class="spacer"></div><p>Timbang ayam bila Anda memiliki timbangan yang sesuai dan metode yang aman.</p><div class="spacer"></div><p>Tidak perlu memaksa ayam ditimbang setiap hari.</p><div class="spacer"></div><h3>KAMIS</h3><div class="spacer"></div><p>Rekap produksi.</p><div class="spacer"></div><h3>JUMAT</h3><div class="spacer"></div><p>Cek:</p><div class="spacer"></div><li>kebocoran</li><li>tikus</li><li>serangga</li><li>predator.</li><div class="spacer"></div><h3>SABTU</h3><div class="spacer"></div><p>Bersihkan area kandang lebih menyeluruh.</p><div class="spacer"></div><h3>MINGGU</h3><div class="spacer"></div><p><strong>EVALUASI.</strong></p><div class="spacer"></div><p>Hitung:</p><div class="spacer"></div><blockquote>pakan minggu ini vs telur minggu ini.</blockquote><div class="spacer"></div><hr><div class="spacer"></div><h1>38. EVALUASI MINGGUAN</h1><div class="spacer"></div><p>Contoh:</p><div class="spacer"></div><p>Minggu 1:</p><div class="spacer"></div><p>Pakan:</p><div class="spacer"></div><p><strong>3,85 kg</strong></p><div class="spacer"></div><p>Telur:</p><div class="spacer"></div><p><strong>25 butir</strong></p><div class="spacer"></div><p>Maka:</p><div class="spacer"></div><p>3.850 gram ÷ 25</p><div class="spacer"></div><p>= <strong>154 gram pakan per telur.</strong></p><div class="spacer"></div><p>Minggu 2:</p><div class="spacer"></div><p>Pakan:</p><div class="spacer"></div><p><strong>3,85 kg</strong></p><div class="spacer"></div><p>Telur:</p><div class="spacer"></div><p><strong>30</strong></p><div class="spacer"></div><p>= 3.850 ÷ 30</p><div class="spacer"></div><p>= <strong>128 gram pakan/telur.</strong></p><div class="spacer"></div><p>Berarti minggu kedua lebih baik dari sisi penggunaan pakan.</p><div class="spacer"></div><p>Ini jauh lebih berguna daripada hanya melihat jumlah telur.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>39. BUAT SISTEM &quot;MERAH-KUNING-HIJAU&quot;</h1><div class="spacer"></div><p>Supaya Anda cepat tahu kondisi usaha.</p><div class="spacer"></div><h3>🟢 HIJAU</h3><div class="spacer"></div><li>ayam aktif</li><li>makan normal</li><li>minum normal</li><li>produksi stabil</li><li>telur bagus</li><li>pakan normal</li><li>tidak ada kematian.</li><div class="spacer"></div><h3>🟡 KUNING</h3><div class="spacer"></div><li>produksi turun</li><li>konsumsi pakan berubah</li><li>telur banyak retak</li><li>kotoran berubah</li><li>ayam mulai lesu</li><li>air cepat habis</li><li>kandang terlalu panas.</li><div class="spacer"></div><p><strong>Cari penyebab.</strong></p><div class="spacer"></div><h3>🔴 MERAH</h3><div class="spacer"></div><li>ayam mati</li><li>beberapa ayam sakit</li><li>produksi jatuh drastis</li><li>sesak napas</li><li>diare berat</li><li>gejala penyakit menyebar.</li><div class="spacer"></div><p><strong>Jangan bereksperimen sendiri. Hubungi tenaga kesehatan hewan.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>40. HAL YANG HARUS ANDA BELI</h1><div class="spacer"></div><p>Untuk awal 5 ayam, prioritaskan:</p><div class="spacer"></div><h3>WAJIB</h3><div class="spacer"></div><li>5 ayam betina layer/pullet</li><li>kandang</li><li>pakan layer</li><li>tempat pakan</li><li>tempat minum</li><li>nest box</li><li>air bersih</li><li>wadah telur</li><li>alat kebersihan</li><li>tempat penyimpanan pakan.</li><div class="spacer"></div><h3>BERGUNA</h3><div class="spacer"></div><li>timbangan</li><li>termometer</li><li>lampu</li><li>buku catatan</li><li>Excel.</li><div class="spacer"></div><h3>JANGAN BOROS DULU</h3><div class="spacer"></div><p>Jangan langsung membeli:</p><div class="spacer"></div><li>mesin mahal</li><li>kandang otomatis</li><li>alat otomatis</li><li>suplemen banyak macam</li><li>vitamin bermacam-macam</li><li>peralatan yang belum Anda tahu manfaatnya.</li><div class="spacer"></div><hr><div class="spacer"></div><h1>41. STRATEGI 3 BULAN PERTAMA</h1><div class="spacer"></div><p>Saya akan membuatnya seperti ini.</p><div class="spacer"></div><h2>BULAN 1 — BELAJAR</h2><div class="spacer"></div><p>Target:</p><div class="spacer"></div><blockquote><strong>Tidak ada ayam mati + pencatatan 100% lengkap.</strong></blockquote><div class="spacer"></div><p>Fokus:</p><div class="spacer"></div><li>adaptasi ayam</li><li>pakan</li><li>air</li><li>kebersihan</li><li>produksi</li><li>pencatatan.</li><div class="spacer"></div><p>Jangan mengejar keuntungan besar dulu.</p><div class="spacer"></div><hr><div class="spacer"></div><h2>BULAN 2 — OPTIMASI</h2><div class="spacer"></div><p>Mulai lihat:</p><div class="spacer"></div><blockquote>berapa gram pakan → berapa telur.</blockquote><div class="spacer"></div><p>Cari:</p><div class="spacer"></div><li>pakan terlalu boros?</li><li>telur banyak retak?</li><li>produksi turun?</li><li>kandang panas?</li><li>air kurang?</li><li>ayam stres?</li><div class="spacer"></div><hr><div class="spacer"></div><h1>42. BULAN 3 — KEPUTUSAN BISNIS</h1><div class="spacer"></div><p>Setelah 60–90 hari, lihat:</p><div class="spacer"></div><p><strong>Apakah usaha ini layak diperbesar?</strong></p><div class="spacer"></div><p>Misalnya hasil:</p><div class="spacer"></div><p>5 ayam</p><div class="spacer"></div><p>→ rata-rata 4 telur/hari</p><div class="spacer"></div><p>→ 120 telur/bulan.</p><div class="spacer"></div><p>Kalau angka ekonomi bagus, baru pertimbangkan:</p><div class="spacer"></div><p><strong>5 → 10 → 20 → 50 ekor.</strong></p><div class="spacer"></div><p>Jangan:</p><div class="spacer"></div><p><strong>5 → 100 ekor</strong></p><div class="spacer"></div><p>hanya karena melihat beberapa hari produksi bagus.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>43. JANGAN LANGSUNG MENAMBAH AYAM</h1><div class="spacer"></div><p>Saya sangat menyarankan:</p><div class="spacer"></div><h3>Fase 1</h3><div class="spacer"></div><p><strong>5 ekor</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p>Belajar 30 hari.</p><div class="spacer"></div><h3>Fase 2</h3><div class="spacer"></div><p><strong>5 ekor</strong></p><div class="spacer"></div><p>↓</p><div class="spacer"></div><p>Belajar 60 hari.</p><div class="spacer"></div><h3>Fase 3</h3><div class="spacer"></div><p><strong>5 ekor</strong></p><div class="spacer"></div><p>↓</p><div class="spacer"></div><p>Evaluasi HPP.</p><div class="spacer"></div><h3>Fase 4</h3><div class="spacer"></div><p>Jika masuk akal:</p><div class="spacer"></div><p><strong>10–20 ekor.</strong></p><div class="spacer"></div><p>Baru setelah sistem stabil:</p><div class="spacer"></div><p><strong>50+ ekor.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>44. FORMAT DATA YANG PALING SAYA SARANKAN</h1><div class="spacer"></div><p>Kalau nanti Anda membuat Excel, buat <strong>6 sheet</strong>:</p><div class="spacer"></div><h3>SHEET 1 — DATA AYAM</h3><div class="spacer"></div><pre><code>ID Ayam
+Tanggal Beli
+Umur
+Jenis/Strain
+Harga Beli
+Status
+Keterangan</code></pre><div class="spacer"></div><h3>SHEET 2 — PAKAN</h3><div class="spacer"></div><pre><code>Tanggal
+Stok Awal
+Pembelian
+Pemakaian
+Stok Akhir
+Harga/Kg
+Biaya</code></pre><div class="spacer"></div><h3>SHEET 3 — PRODUKSI</h3><div class="spacer"></div><pre><code>Tanggal
+Jumlah Ayam
+Telur Bagus
+Telur Retak
+Telur Rusak
+Total Telur
+HDP</code></pre><div class="spacer"></div><h3>SHEET 4 — BIAYA</h3><div class="spacer"></div><pre><code>Tanggal
+Kategori
+Nama Biaya
+Jumlah
+Harga
+Total
+Keterangan</code></pre><div class="spacer"></div><h3>SHEET 5 — PENJUALAN</h3><div class="spacer"></div><pre><code>Tanggal
+Jumlah Telur
+Harga Satuan
+Omzet
+Pembeli
+Keterangan</code></pre><div class="spacer"></div><h3>SHEET 6 — LAPORAN</h3><div class="spacer"></div><pre><code>Total Pakan
+Total Biaya Pakan
+Total Biaya
+Total Telur
+Telur Bagus
+Telur Rusak
+Omzet
+HPP/Telur
+Laba/Rugi
+HDP</code></pre><div class="spacer"></div><p>Dengan model ini, Anda nantinya bisa melihat <strong>bisnis ayam Anda dari angka</strong>, bukan dari perasaan.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>45. CONTOH TARGET 1 HARI</h1><div class="spacer"></div><p>Misalnya pagi Anda membuka kandang.</p><div class="spacer"></div><p><strong>Jumlah ayam:</strong> 5</p><div class="spacer"></div><p><strong>Ayam sehat:</strong> 5</p><div class="spacer"></div><p><strong>Pakan:</strong> 550 gram</p><div class="spacer"></div><p><strong>Air:</strong> tersedia</p><div class="spacer"></div><p><strong>Telur:</strong> 4</p><div class="spacer"></div><p>Maka:</p><div class="spacer"></div><p>HDP = 4 ÷ 5 × 100%</p><div class="spacer"></div><p>= <strong>80%</strong></p><div class="spacer"></div><p>Lalu catat.</p><div class="spacer"></div><p>Selesai.</p><div class="spacer"></div><p>Besok lakukan lagi.</p><div class="spacer"></div><p>Jangan rumit.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>46. CONTOH CATATAN HARIAN PALING SEDERHANA</h1><div class="spacer"></div><p>Setiap malam Anda cukup menulis:</p><div class="spacer"></div><blockquote><strong>20 Agustus 2026</strong></blockquote><p>&gt;</p><blockquote>Ayam: 5  </blockquote><blockquote>Ayam sehat: 5  </blockquote><blockquote>Pakan: 550 g  </blockquote><blockquote>Air: normal  </blockquote><blockquote>Telur: 4  </blockquote><blockquote>Retak: 0  </blockquote><blockquote>Terjual: 4  </blockquote><blockquote>Harga: Rp....  </blockquote><blockquote>Omzet: Rp....  </blockquote><blockquote>Kondisi kandang: baik  </blockquote><blockquote>Catatan: tidak ada masalah</blockquote><div class="spacer"></div><p>Hanya membutuhkan beberapa menit.</p><div class="spacer"></div><p>Tetapi setelah 30 hari, Anda sudah memiliki <strong>data bisnis yang sangat berharga</strong>.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>47. SUMBER MASALAH YANG HARUS SELALU ANDA CURIGAI</h1><div class="spacer"></div><p>Kalau produksi telur turun, jangan langsung menyalahkan ayam.</p><div class="spacer"></div><p>Periksa urutannya:</p><div class="spacer"></div><p><strong>1. Air</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>2. Pakan</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>3. Suhu/kondisi kandang</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>4. Stres</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>5. Kesehatan</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>6. Umur ayam</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>7. Pencahayaan</strong></p><div class="spacer"></div><p>↓  </p><div class="spacer"></div><p><strong>8. Faktor lain</strong></p><div class="spacer"></div><p>Ini jauh lebih logis daripada langsung memberi obat.</p><div class="spacer"></div><hr><div class="spacer"></div><h1>48. ATURAN EMAS UNTUK 5 AYAM</h1><div class="spacer"></div><p>Kalau saya yang menjalankan peternakan 5 ekor ini, saya akan memegang aturan berikut:</p><div class="spacer"></div><p><strong>1. Jangan biarkan air habis.</strong></p><div class="spacer"></div><p><strong>2. Jangan menggunakan pakan berjamur/basah.</strong></p><div class="spacer"></div><p><strong>3. Jangan membuat kandang lembap.</strong></p><div class="spacer"></div><p><strong>4. Jangan mencampur ayam baru sembarangan.</strong></p><div class="spacer"></div><p><strong>5. Jangan asal memberi obat.</strong></p><div class="spacer"></div><p><strong>6. Jangan mengganti pakan secara mendadak.</strong></p><div class="spacer"></div><p><strong>7. Jangan membeli ayam tanpa mengetahui umur dan riwayatnya.</strong></p><div class="spacer"></div><p><strong>8. Jangan hanya mencatat telur; catat biaya.</strong></p><div class="spacer"></div><p><strong>9. Jangan menghitung keuntungan sebelum menghitung HPP.</strong></p><div class="spacer"></div><p><strong>10. Jangan menambah populasi sebelum data 2–3 bulan menunjukkan sistem Anda stabil.</strong></p><div class="spacer"></div><hr><div class="spacer"></div><h1>Intinya</h1><div class="spacer"></div><p>Untuk <strong>5 ekor</strong>, tujuan pertama bukan mendapatkan uang banyak.</p><div class="spacer"></div><p>Tujuan pertama adalah membuat sistem:</p><div class="spacer"></div><blockquote><strong>AYAM SEHAT → PAKAN TERKONTROL → TELUR TERCATAT → BIAYA TERCATAT → HPP TERHITUNG → PENJUALAN TERCATAT → LABA/RUGI TERLIHAT.</strong></blockquote><div class="spacer"></div><p>Pedoman Kementerian Pertanian juga menempatkan pencatatan, manajemen pakan, kesehatan, biosekuriti, dan kesejahteraan ayam sebagai bagian penting dari praktik pemeliharaan yang baik. (<a href="https://epublikasi.pertanian.go.id/index.php/pertanianpress/catalog/book/48?utm_source=chatgpt.com" target="_blank" rel="noopener">epublikasi.pertanian.go.id</a>)</p><div class="spacer"></div><p><strong>Kalau Anda mau benar-benar menjalankannya, langkah berikutnya yang paling berguna adalah membuat Excel khusus untuk 5 ekor tersebut</strong>: saya bisa susunkan format <strong>Excel lengkap dari hari pertama sampai HPP otomatis</strong>, termasuk kolom pakan, telur, stok pakan, biaya ayam, penyusutan kandang, omzet, laba/rugi, HDP, dan grafik produksi.</p>
+
+  </main>
+</div>
+
+<footer>Materi ini merupakan rancangan operasional dasar untuk memulai dengan 5 ekor ayam petelur. Harga contoh harus diganti dengan harga nyata di daerah Anda.</footer>
+
+<div class="toolbar">
+  <button onclick="window.print()">🖨 Cetak / PDF</button>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Atas</button>
+</div>
+<script>
+const content=document.getElementById('content');
+const toc=document.getElementById('toc');
+const search=document.getElementById('search');
+const sidebar=document.querySelector('.sidebar');
+const mobileMenu=document.getElementById('mobileMenu');
+
+const headings=[...content.querySelectorAll('h2')];
+headings.forEach((h,i)=>{
+  h.id='bagian-'+(i+1);
+  const a=document.createElement('a');
+  a.href='#'+h.id;
+  a.textContent=h.textContent;
+  toc.appendChild(a);
+});
+
+mobileMenu.addEventListener('click',()=>{
+  sidebar.classList.toggle('open');
+  mobileMenu.textContent=sidebar.classList.contains('open')?'Tutup Daftar Isi':'Buka Daftar Isi';
+});
+
+search.addEventListener('input',function(){
+  const q=this.value.toLowerCase().trim();
+  [...content.children].forEach(el=>{
+    if(!q){el.style.display='';return}
+    el.style.display=el.textContent.toLowerCase().includes(q)?'':'none';
+  });
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      document.querySelectorAll('#toc a').forEach(a=>a.classList.remove('active'));
+      const active=document.querySelector(`#toc a[href="#${entry.target.id}"]`);
+      if(active) active.classList.add('active');
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+headings.forEach(h=>observer.observe(h));
+</script>
+</body>
+</html>
